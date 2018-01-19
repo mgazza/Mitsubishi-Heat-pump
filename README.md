@@ -1,7 +1,7 @@
 # Mitsubishi-Heat-pump
 **Work in progress**
 
-ESP8266 Mitsubishi Heat pump controller, with web sockets screaming and mqtt
+ESP8266 Mitsubishi Heat pump controller, with web sockets streaming and mqtt
 
 ## TODO
 1. mqtt client subscription
