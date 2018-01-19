@@ -1,8 +1,9 @@
 # Mitsubishi-Heat-pump
-*Work in progress
+**Work in progress**
+
 ESP8266 Mitsubishi Heat pump controller, with web sockets screaming and mqtt
 
-##TODO
+## TODO
 1. mqtt client subscription
 2. AP - STA mode and configuration. 
 3. Sprite svg generation
