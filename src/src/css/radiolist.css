@@ -1,0 +1,14 @@
+.radio-list {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  margin-top: 5px;
+}
+
+.radio-list-item {
+  display: inline-block;
+}
+ 
+ input:checked + .radio-list-item {
+  background-color: #2c3e50;
+}

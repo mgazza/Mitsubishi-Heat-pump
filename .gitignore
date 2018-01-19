@@ -1,0 +1,8 @@
+.vscode
+node_modules
+src/css/**
+src/scripts/**
+src/images/**
+data/index.html
+data/css/**
+data/images/**

@@ -1,0 +1,132 @@
+.item{
+  margin: 60px 0 0 0%;
+  display:block;
+}
+
+input[type="checkbox"] {display:none;}
+input[type="radio"] {display:none;}
+
+
+.icon{
+	width:48px;
+	height: 48px;
+	background-color:#d7dcdf;
+	-webkit-mask:url("../images/icons.svg") no-repeat;
+	mask:url("../images/icons.svg") no-repeat;
+}
+
+.icon+ .icon-label{
+	width:48px;
+	text-align: center;
+}
+
+.auto{
+	
+ }
+ 
+.cool{
+	-webkit-mask-position-y: -48px;
+	mask-position-y: -48px;
+ }
+ 
+.dry{
+	-webkit-mask-position-y: -144px;
+	mask-position-y: -144px;
+ }
+ 
+.heat{
+	-webkit-mask-position-y: -386px;
+	mask-position-y: -386px;
+ }
+ 
+.fan{
+	-webkit-mask-position-y: -192px;
+	mask-position-y: -192px;
+ }
+ 
+ 
+.oneoffive{
+	-webkit-mask-position-y: -578px;
+	mask-position-y: -578px;
+ }
+ 
+.twooffive{
+	-webkit-mask-position-y: -918px;
+	mask-position-y: -918px;
+ }
+ 
+.threeoffive{
+	-webkit-mask-position-y: -820px;
+	mask-position-y: -820px;
+ }
+ 
+.fouroffive{
+	-webkit-mask-position-y: -288px;
+	mask-position-y: -288px;
+ }
+ 
+.fiveoffive{
+	-webkit-mask-position-y: -240px;
+	mask-position-y: -240px;
+ }
+ 
+.oneoffour{
+	-webkit-mask-position-y: -626px;
+	mask-position-y: -626px;
+
+ }
+ 
+.twooffour{
+	-webkit-mask-position-y: -966px;
+	mask-position-y: -966px;
+ }
+ 
+.threeoffour{
+	-webkit-mask-position-y: -868px;
+	mask-position-y: -868px;
+ }
+ 
+.fouroffour{
+	-webkit-mask-position-y: -336px;
+	mask-position-y: -336px;
+ }
+ 
+.swing{
+	-webkit-mask-position-y: -772px;
+	mask-position-y: -772px;
+ }
+ 
+.left{
+	-webkit-mask-position-y: -434px;
+	mask-position-y: -434px;
+ }
+ 
+.leftleft{
+	-webkit-mask-position-y: -482px;
+	mask-position-y: -482px;
+ }
+ 
+.down{
+	-webkit-mask-position-y: -96px;
+	mask-position-y: -96px;
+ }
+ 
+.right{
+	-webkit-mask-position-y: -676px;
+	mask-position-y: -676px;
+ }
+ 
+.rightright{
+	-webkit-mask-position-y: -724px;
+	mask-position-y: -724px;
+ }
+ 
+.leftright{
+	-webkit-mask-position-y: -530px;
+	mask-position-y: -530px;
+ }
+ 
+.quiet{
+	-webkit-mask-position-y: -1016px;
+	mask-position-y: -1016px
+ }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ESP8266-01 - A1(W)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <link rel="stylesheet" href="css/app.css">
+  
+  <script src="scripts/app.js"></script>
+  
+</head>
+<body onload="javascript:appstart()">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+  
+    <ul class="navigation">
+        <li class="nav-item control-trigger"><a href="#" onclick="setControlVisable()">Control</a></li>
+        <li class="nav-item wifi-trigger"><a href="#" onclick="setWifiVisable()">Wifi</a></li>
+        <li class="nav-item mqtt-trigger"><a href="#" onclick="setMqttVisable()">Mqtt</a></li>
+        <li class="nav-item debug-trigger"><a href="#" onclick="setLogVisable()">Debug</a></li>
+    </ul>
+
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"></label>
+
+    <div class="site-wrap" id="main">
+    
+        <div class="control" rv-show="data.controlVisable">
+        
+            <div class="item">
+                <label>Room temperature</label>
+                <span class="value" rv-text="data.control.roomTemp"></span>
+            </div>
+
+            <div class="item">
+                Power<br />
+                <label class="switch">
+                    <input id="power" type="checkbox" rv-checked="data.control.power | notify | power">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            
+            <div class="item">
+                Mode<br />
+                    <label class="radio-list" rv-each-mode="data.dataMap.mode">
+                        <input type="radio" rv-checked="data.control.mode | notify" rv-value="mode.value">    
+                        <div class="radio-list-item" rv-class="mode.icon">
+                        </div>
+                        <div class="icon-label">{mode.value}</div>
+                    </label>
+            </div>
+            
+            <div class="item">
+                Fan<br />
+                    <label class="radio-list" rv-each-fan="data.dataMap.fan">
+                        <input type="radio" rv-checked="data.control.fan | notify" rv-value="fan.value">    
+                        <div class="radio-list-item" rv-class="fan.icon">
+                        </div>
+                        <div class="icon-label">{fan.value}</div>
+                    </label>
+            </div>
+            
+            <div class="item">
+                Vane<br />
+                    <label class="radio-list" rv-each-vane="data.dataMap.vane">
+                        <input type="radio" rv-checked="data.control.vane | notify" rv-value="vane.value">    
+                        <div class="radio-list-item" rv-class="vane.icon">
+                        </div>
+                        <div class="icon-label">{vane.value}</div>
+                    </label>
+            </div>
+            
+            <div class="item">
+                Wide Vane<br />
+                    <label class="radio-list" rv-each-widevane="data.dataMap.wideVane">
+                        <input type="radio" rv-checked="data.control.wideVane | notify" rv-value="widevane.value">    
+                        <div class="radio-list-item" rv-class="widevane.icon">
+                        </div>
+                    </label>
+            </div>
+                                
+            <div class="range-slider item">
+                Set Point<br />
+                <input id="setPoint" class="range-slider__range" type="range" min="16" max="31" step="1" rv-value="data.control.setPoint | notify" />
+                <span class="value" rv-text="data.control.setPoint">0</span>
+            </div>
+            
+            
+        </div>
+      
+      <div class="wifi" rv-show="data.wifiVisable">
+      </div>
+      
+      <div class="mqtt" rv-show="data.mqttVisable">
+      </div>
+      
+      
+      <div class="debug" rv-show="data.logVisable">
+          <table>
+              <thead>
+                <th>Level</th><th>Message</th>
+              </thead>
+              <tbody>
+                <tr rv-each-log="data.log"><td rv-text="log.level"/><td rv-text="log.message"/></tr>
+              </tbody>
+          </table>
+      </div>
+     
+    </div>    
+  </div>
+</body>
+</html>
